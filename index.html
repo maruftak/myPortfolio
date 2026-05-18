@@ -705,15 +705,15 @@
     .contact-left {
       width: 100%;
       min-width: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+      display: block;
     }
 
-    .contact-text p {
+    .contact-desc {
+      display: block;
       font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.8;
+      margin-bottom: 28px;
     }
 
     .socials { display: flex; flex-direction: column; gap: 10px; width: 100%; min-width: 0; }
@@ -1214,9 +1214,7 @@
     </div>
     <div class="contact-grid">
       <div class="contact-left fi">
-        <div class="contact-text">
-          <p>Open to <strong style="color:var(--green)">penetration testing</strong> engagements, ethical hacking roles, bug bounty collaborations, and security research. Also available for full-stack dev projects. If it involves breaking things legally — I'm interested.</p>
-        </div>
+        <p class="contact-desc">Open to <strong style="color:var(--green)">penetration testing</strong> engagements, ethical hacking roles, bug bounty collaborations, and security research. Also available for full-stack dev projects. If it involves breaking things legally — I'm interested.</p>
         <nav class="socials" aria-label="Social media links">
           <a href="mailto:maruftak007@gmail.com" class="social-row em" aria-label="Send email">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
