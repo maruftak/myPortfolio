@@ -697,21 +697,22 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 80px;
       align-items: start;
     }
 
-    .contact-left { width: 100%; }
+    .contact-left { width: 100%; min-width: 0; }
+
+    .contact-text { margin-bottom: 24px; }
 
     .contact-text p {
       font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.8;
-      margin-bottom: 24px;
     }
 
-    .socials { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+    .socials { display: flex; flex-direction: column; gap: 10px; width: 100%; min-width: 0; }
 
     .social-row {
       display: flex;
@@ -727,7 +728,12 @@
       transition: border-color 0.2s, color 0.2s, transform 0.2s;
       cursor: pointer;
       width: 100%;
+      min-width: 0;
+      max-width: 100%;
       box-sizing: border-box;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     .social-row svg { width: 18px; height: 18px; flex-shrink: 0; }
@@ -740,7 +746,7 @@
     .social-row.fb:hover  { border-color: #1877F2; color: #1877F2; }
 
     /* Form */
-    .contact-form { display: flex; flex-direction: column; gap: 14px; }
+    .contact-form { display: flex; flex-direction: column; gap: 14px; min-width: 0; width: 100%; }
 
     .fg { display: flex; flex-direction: column; gap: 6px; }
 
