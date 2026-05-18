@@ -702,14 +702,16 @@
       align-items: start;
     }
 
+    .contact-left { width: 100%; }
+
     .contact-text p {
       font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.8;
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
 
-    .socials { display: flex; flex-direction: column; gap: 10px; }
+    .socials { display: flex; flex-direction: column; gap: 10px; width: 100%; }
 
     .social-row {
       display: flex;
@@ -722,13 +724,16 @@
       text-decoration: none;
       color: var(--muted);
       font-size: 0.82rem;
-      transition: all 0.2s;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
       cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     .social-row svg { width: 18px; height: 18px; flex-shrink: 0; }
 
     .social-row:hover { transform: translateX(5px); }
+    .social-row.em:hover  { border-color: var(--green); color: var(--green); }
     .social-row.gh:hover  { border-color: #fff; color: #fff; }
     .social-row.li:hover  { border-color: #0A66C2; color: #0A66C2; }
     .social-row.ig:hover  { border-color: #E1306C; color: #E1306C; }
@@ -804,6 +809,9 @@
       .photo-frame { width: 220px; height: 280px; margin: 0 auto; }
       .about-grid { grid-template-columns: 1fr; gap: 48px; }
       .skills-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 820px) {
       .contact-grid { grid-template-columns: 1fr; gap: 48px; }
     }
 
@@ -1195,11 +1203,15 @@
       <h2 class="sh-title" id="contact-title">Get In <span class="accent">Touch</span></h2>
     </div>
     <div class="contact-grid">
-      <div class="fi">
+      <div class="contact-left fi">
         <div class="contact-text">
           <p>Open to <strong style="color:var(--green)">penetration testing</strong> engagements, ethical hacking roles, bug bounty collaborations, and security research. Also available for full-stack dev projects. If it involves breaking things legally — I'm interested.</p>
         </div>
         <nav class="socials" aria-label="Social media links">
+          <a href="mailto:maruftak007@gmail.com" class="social-row em" aria-label="Send email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            maruftak007@gmail.com
+          </a>
           <a href="https://github.com/maruftak" class="social-row gh" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             github.com/maruftak
